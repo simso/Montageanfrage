@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <!--
+  * Please see the included README.md file for license terms and conditions.
+  -->
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="jqm/jquery.mobile-min.css">
+        <meta charset="UTF-8">
+        <title>Blank App Designer Cordova Web App Project Template</title>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+        <!--
+  * The "meta viewport" tag (below) helps your app size appropriately to a device's ideal viewport.
+  * Note that Windows device viewports work better when initialized using the @viewport CSS rule.
+  * For a quick overview of "meta viewport" and @viewport, see this article:
+  *   http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag
+  * To see how it works, try your app on a real device with and without a "meta viewport" tag.
+  * Additional useful references include:
+  *   http://www.quirksmode.org/mobile/viewports.html
+  *   http://www.quirksmode.org/mobile/metaviewport/devices.html
+  *   https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html
+-->
+
+        <!-- <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1"> -->
+        <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, minimum-scale=1, maximum-scale=2"> -->
+
+        <style>
+            /* following three (cascaded) are equivalent to above three meta viewport statements */
+            /* see http://www.quirksmode.org/blog/archives/2014/05/html5_dev_conf.html */
+            /* see http://dev.w3.org/csswg/css-device-adapt/ */
+                @-ms-viewport { width: 100vw ; min-zoom: 100% ; zoom: 100% ; }          @viewport { width: 100vw ; min-zoom: 100% zoom: 100% ; }
+                @-ms-viewport { user-zoom: fixed ; min-zoom: 100% ; }                   @viewport { user-zoom: fixed ; min-zoom: 100% ; }
+                /*@-ms-viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }   @viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }*/
+        </style>
+
+        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+
+        <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
+        <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work below -->
+        <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
+
+        <!-- Recommended location for your JavaScript libraries -->
+        <!-- These library references (below) are just examples to give you the general idea... -->
+        <!-- <script src="lib/mc/hammer.js"></script> -->
+        <!-- <script src="lib/ft/fastclick.js"></script> -->
+
+        <!--
+  * cordova.js is a phantom lib for "Cordova HTML5 web app," it does nothing in a "Standard HTML5 web app"
+  * Seeing a "Failed to load resource: net::ERR_FILE_NOT_FOUND" message caused by this "cordova.js" script?
+  * The cordova.js script is required if you convert your "Standard HTML5" project into a "Cordova" project.
+  * You can safely ignore the error or comment out this line if you will not be developing a Cordova app.
+-->
+        <script src="cordova.js" id="xdkJScordova_"></script>
+
+        <script src="js/app.js"></script>
+        <!-- for your event code, see README and file comments for details -->
+        <script src="js/init-app.js"></script>
+        <!-- for your init code, see README and file comments for details -->
+        <script src="xdk/init-dev.js"></script>
+        <!-- normalizes device and document ready events, see file for details -->
+        <script type="application/javascript" src="lib/jquery.min.js"></script>
+        <script type="application/javascript" src="jqm/jquery.mobile-min.js" data-ver="0"></script>
+        <script type="application/javascript" src="xdk/appdesigner/js/rest-of-space.js"></script>
+    </head>
+
+    <body>
+        <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
+        <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work above -->
+        <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
+        <div class="upage ui-page-theme-a vertical-col" id="mainpage" data-role="page">
+            <div class="widget uib_w_1 ui-content no_wrap d-margins test2" data-uib="jquery_mobile/listview" data-ver="0">
+                <form class="ui-filterable">
+                    <input id="autocomplete-input" data-type="search" placeholder="Search fruits...">
+                </form>
+                <ul data-role="listview" data-inset="true" data-filter="true" data-filter-reveal="true" data-input="#autocomplete-input">
+                    <li>
+                        <h2>iOS 6.1</h2>
+                        <p>Apple released iOS 6.1</p>
+                        <p class="ui-li-aside">iOS</p>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../_assets/img/blackberry_10.png" class="ui-li-thumb">
+                            <h2>BlackBerry 10</h2>
+                            <p>BlackBerry launched the Z10 and Q10 with the new BB10 OS</p>
+                            <p class="ui-li-aside">BlackBerry</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../_assets/img/lumia_800.png" class="ui-li-thumb">
+                            <h2>WP 7.8</h2>
+                            <p>Nokia rolls out WP 7.8 to Lumia 800</p>
+                            <p class="ui-li-aside">Windows Phone</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../_assets/img/galaxy_express.png" class="ui-li-thumb">
+                            <h2>Galaxy</h2>
+                            <p>New Samsung Galaxy Express</p>
+                            <p class="ui-li-aside">Samsung</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../_assets/img/nexus_7.png" class="ui-li-thumb">
+                            <h2>Nexus 7</h2>
+                            <p>Rumours about new full HD Nexus 7</p>
+                            <p class="ui-li-aside">Android</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../_assets/img/firefox_os.png" class="ui-li-thumb">
+                            <h2>Firefox OS</h2>
+                            <p>ZTE to launch Firefox OS smartphone at MWC</p>
+                            <p class="ui-li-aside">Firefox</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../_assets/img/tizen.png" class="ui-li-thumb">
+                            <h2>Tizen</h2>
+                            <p>First Samsung phones with Tizen can be expected in 2013</p>
+                            <p class="ui-li-aside">Tizen</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <h2>Symbian</h2>
+                            <p>Nokia confirms the end of Symbian</p>
+                            <p class="ui-li-aside">Symbian</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </body>
+
+</html>

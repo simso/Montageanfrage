@@ -1,0 +1,44 @@
+.ui-collapsible-content {
+  overflow: hidden;
+}
+.ui-collapsible-content .outset-margin:first-child {
+  margin: -10px -15px;
+  box-sizing: content-box;
+}
+@media all {
+  .wrapping-col > .d-margins,
+  .wrapping-col > .afScrollPanel > .d-margins {
+    margin-left: 4px;
+    margin-right: 5px;
+  }
+  .wrapping-col > .d-margins,
+  .wrapping-col > .afScrollPanel > .d-margins {
+    margin-left: 4px;
+    margin-right: 5px;
+  }
+  .vertical-col > .d-margins,
+  .vertical-col > .afScrollPanel > .d-margins {
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+  .vertical-col > .d-margins,
+  .vertical-col > .afScrollPanel > .d-margins {
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+  .d-margins {
+    margin-top: 9px;
+    margin-bottom: 10px;
+  }
+}
+.test {
+  width: 30px;
+  float: left;
+}
+.test2 li {
+  float: left;
+  width: 30.9333%;
+  /* 33.3333% incl. 2 x 1.2% margin */
+
+  margin: .5625em 1.2%;
+}
